@@ -1,0 +1,389 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    z-index: 1000; /* Ensure the navbar is on top of other content */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Adjust the position of header if needed */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .5s;
+}
+
+.header:hover::before {
+    left: 100%;
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+}
+
+.logoLink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    height: 50px; /* Adjust the height to fit your design */
+    width: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* About Page Styles */
+.about-container {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text for high contrast */
+    background-color: #000000; /* Bold black background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Spacer Styles */
+.spacer {
+    height: calc(60px + 20px); /* Height to accommodate fixed navbar */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    padding: 120px 20px; /* Increase padding to ensure content is below the fixed header */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #000000; /* Bold black background */
+    color: #ffffff; /* White text for contrast */
+    flex: 1; /* Ensure it takes up full viewport height */
+    margin-top: calc(60px + 20px); /* Adjust margin-top to accommodate the fixed navbar height */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/* Hero Title Styles */
+.hero-title {
+    font-size: 3rem; /* Large font size for prominence */
+    margin: 0;
+    font-weight: 700; /* Bold text for impact */
+    line-height: 1.2;
+    color: #3cc47c; /* New vibrant green highlight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhanced text shadow */
+    animation: fadeIn 2s ease-out;
+}
+
+/* Hero Subtitle Styles */
+.hero-subtitle {
+    font-size: 1.4rem; /* Slightly larger subtitle */
+    margin-top: 20px; /* Space between title and subtitle */
+    font-weight: 300;
+    line-height: 1.4;
+    color: #00e5ff; /* Vibrant cyan highlight */
+    animation: slideUp 2s ease-out;
+}
+
+/* Animation for Hero Title */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for Hero Subtitle */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    margin-top: 20px; /* Add margin to ensure space below header */
+}
+
+/* Info Section Styles */
+.info-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px 0; /* Reduced margin to close the gap */
+    padding-top: 20px; /* Add padding-top to create space below header */
+}
+
+/* Info Title Styles */
+.info-title {
+    font-size: 2.5rem;
+    color: #3cc47c; /* New vibrant green highlight */
+    margin-bottom: 20px;
+}
+
+/* Description Styles */
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Highlight Styles */
+.highlight {
+    color: #00e5ff; /* Vibrant cyan highlight */
+    font-weight: bold;
+}
+
+/* Login Section Styles */
+/* Login Section Styles */
+.login-section {
+    text-align: center;
+}
+
+.login-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.5px solid #00e5ff; /* White border */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for a smoother look */
+    background-color: rgba(0, 0, 0, 0.5); /* Slight background for contrast */
+}
+
+.login-text {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #00e5ff; /* Vibrant cyan button */
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    margin-top: 10px;
+    border: 2px solid #ffffff; /* White border for button */
+    width: 55%;
+}
+
+.button:hover {
+    background-color: #3cc47c; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Features Container Styles */
+.features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap for better spacing */
+    padding: 30px;
+}
+
+/* Feature Title Styles */
+.features-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #3cc47c; /* New vibrant green color */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+/* Feature Box Styles */
+.feature-box {
+    background: #1a1a1a; /* Dark background for contrast */
+    padding: 30px;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Feature Box Hover Effect */
+.feature-box:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Feature Icon Styles */
+.feature-icon {
+    color: #3cc47c; /* Vibrant green for icons */
+    font-size: 2.5rem; /* Larger icon size */
+    margin-bottom: 15px; /* Space between icon and heading */
+}
+
+/* Feature Heading Styles */
+.feature-heading {
+    font-size: 1.75rem; /* Slightly larger font size */
+    color: #00e5ff; /* Vibrant cyan for headings */
+    margin-bottom: 15px; /* Space between heading and description */
+}
+
+/* Feature Description Styles */
+.feature-description {
+    font-size: 1rem;
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: #3cc47c; /* New vibrant green background */
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon {
+    margin-right: 10px;
+}
+
+.contact-icon.linkedin {
+    color: #0A66C2; /* LinkedIn blue */
+}
+
+.contact-icon.email {
+    color: #E74C3C; /* Email red */
+}
+
+.contact-link {
+    color: #ffffff;
+    text-decoration: underline; /* Apply underline to contact links */
+}
+
+/* Footer Styles */
+
+.footer {
+    padding: 20px;
+    background-color: #000000;
+    text-align: center;
+  }
+  
+
+/* Developed by Section Styles */
+.developed-by {
+    margin-bottom: 20px;
+}
+
+.developed-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.developers {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.developer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.developer-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #74f0ed; /* Add your desired border color and width here */
+}
+
+
+
+.developer-link-logo {
+    color: #0077b5;
+    margin-right: 10px;
+}
+
+.developer-name {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.developer-link {
+    font-size: 0.9rem;
+    color: #00e5ff;
+    text-decoration: none;
+}
+
+.developer-link:hover {
+    text-decoration: underline;
+}

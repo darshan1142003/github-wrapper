@@ -1,0 +1,97 @@
+/* ReportGenerator.css */
+
+/* Container Styles */
+.container {
+    background-color: #000000; /* Match About page background */
+    color: #ffffff; /* Match About page text color */
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Title Styles */
+.title {
+    font-size: 2.5rem; /* Slightly smaller for better alignment */
+    color: #00e5ff; /* Vibrant cyan to match About page highlight */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700; /* Bold for prominence */
+}
+
+/* Instructions Styles */
+.instructions {
+    font-size: 1.1rem; /* Slightly smaller font size for better alignment */
+    color: #e6f2ff; /* Light cyan for readability */
+    margin-bottom: 30px;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Input Container Styles */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Reduced width for better alignment */
+}
+
+/* Input Styles */
+.input {
+    padding: 8px; /* Adjusted padding for smaller size */
+    font-size: 0.9rem; /* Smaller font size */
+    width: 100%;
+    height: 100%;
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #b3cde0; /* Light border for contrast */
+    background-color: #181818; /* Dark background for inputs */
+    color: #ffffff; /* White text for inputs */
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+.button {
+    background-color: #00e5ff; /* Vibrant cyan to match About page */
+    border: none;
+    padding: 8px 16px; /* Adjusted padding for consistency */
+    cursor: pointer;
+    font-size: 0.9rem; /* Adjusted font size */
+    color: #ffffff;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Matching box shadow */
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #3cc47c; /* Slightly darker shade on hover */
+    transform: scale(1.05);
+}
+
+/* Error Styles */
+.error {
+    color: #cc0000; /* Red color for errors */
+    font-size: 0.9rem; /* Adjusted font size */
+    margin-top: 20px;
+}
+
+/* Logout Button Styles */
+.logout-button {
+    background-color: #ff0000; /* Bold red for logout */
+    border: none;
+    padding: 8px 16px; /* Adjusted padding */
+    cursor: pointer;
+    font-size: 0.9rem; /* Adjusted font size */
+    color: #ffffff;
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 30px;
+}
+
+.logout-button:hover {
+    background-color: #3cc47c; /* Slightly darker shade on hover */
+}
+/* Footer Styles */
+

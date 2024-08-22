@@ -1,0 +1,60 @@
+.login-container {
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(252, 251, 251);
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #00e5ff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%; /* Set width to 90% to ensure it fits within the container */
+    height: 25px; /* Set a specific height */
+    padding: 3px; /* Padding inside the input box */
+    border-radius: 5px;
+    border: 1px solid #00e5ff;
+    background-color: #e6f2ff;
+    color: #181818;
+    font-size: 0.7rem; /* Font size inside the input box */
+}
+
+.submit-button {
+    width: 100%; /* Set width to 100% to make it stretch across the container */
+    padding: 8px;
+    background-color: #00e5ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #3cc47c;
+}
+
+.error {
+    color: #cc0000;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,69 @@
+/* Import Catchy Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Example: Roboto for a catchy font */
+
+/* Navbar Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    z-index: 1000; /* Ensure the navbar is on top of other content */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Logo Styles */
+.logo {
+    font-family: 'Roboto', sans-serif; /* Apply catchy font */
+    font-size: 30px; /* Adjust font size as needed */
+    font-weight: 700; /* Make it bold for emphasis */
+    position: relative; /* Position relative to handle pseudo-elements */
+    display: flex;
+    align-items: center;
+}
+
+.logo::before {
+    content: 'GitHub'; /* Text for "GitHub" */
+    color: #ffffff; /* Color for "GitHub" */
+}
+
+.logo::after {
+    content: 'Wrapper'; /* Text for "Wrapper" */
+    color: #00e5ff; /* Color for "Wrapper" */
+    margin-left: 5px; /* Space between "GitHub" and "Wrapper" */
+}
+
+/* Adjusted .logoLink */
+.logoLink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar Links */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navLink {
+    color: #ffffff; /* Adjust color as needed */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navLink:hover {
+    color: #74f0ed; /* Adjust hover color as needed */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
