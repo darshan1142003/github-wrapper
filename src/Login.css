@@ -1,3 +1,4 @@
+/* Default Styles */
 .login-container {
     max-width: 250px;
     margin: 0 auto;
@@ -10,7 +11,7 @@
 .login-title {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #00e5ff;
 }
 
@@ -26,7 +27,7 @@
 }
 
 .input {
-    width: 100%; /* Set width to 90% to ensure it fits within the container */
+    width: 100%; /* Set width to 100% to ensure it fits within the container */
     height: 25px; /* Set a specific height */
     padding: 3px; /* Padding inside the input box */
     border-radius: 5px;
@@ -58,3 +59,48 @@
     margin-bottom: 15px;
     font-weight: bold;
 }
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .login-container {
+        max-width: 90%; /* Adjust width to fit smaller screens */
+        padding: 10px; /* Reduced padding for better fit */
+    }
+
+    .login-title {
+        font-size: 1rem; /* Smaller font size for better fit */
+        margin-bottom: 15px; /* Reduced margin for better spacing */
+    }
+
+    .form-group {
+        margin-bottom: 10px; /* Reduced margin for better spacing */
+    }
+
+    .label {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .input {
+        height: 30px; /* Slightly larger height for ease of use */
+        font-size: 0.8rem; /* Larger font size for better readability */
+    }
+
+    .submit-button {
+        padding: 10px; /* Increased padding for better click area */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .error {
+        font-size: 0.9rem; /* Slightly smaller font size for error messages */
+    }
+}
+
+.register-prompt {
+    font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .button {
+        padding: 8px 15px; /* Adjusted padding for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+

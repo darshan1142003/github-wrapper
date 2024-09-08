@@ -104,13 +104,15 @@ const AboutPage = () => {
             <div className="contact-item">
               <FaEnvelope size={24} className="contact-icon email" />
               <p>
-                <strong>Email:</strong> <a href="mailto:darshangurav1142003@gmail.com" className="contact-link">darshangurav1142003@gmail.com</a>
+                <strong>Email:</strong> <a href="mailto:darshangurav1142003@gmail.com" className="contact-link">darshangurav1142003@gmail.com</a> <span>/</span>
+                <a href="mailto:patilmanasi430@gmail.com" className="contact-link">patilmanasi430@gmail.com</a>
               </p>
             </div>
             <div className="contact-item">
               <FaLinkedin size={24} className="contact-icon linkedin" />
               <p>
-                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/darshan1142003/" className="contact-link">darshan1142003</a>
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/darshan1142003/" className="contact-link">darshan1142003</a> <span>/</span>
+                <a href="https://www.linkedin.com/in/mansi-patil-56296323b/" className="contact-link">mansi-patil-56296323b</a>
               </p>
             </div>
           </div>
@@ -132,9 +134,7 @@ const AboutPage = () => {
             </a>
           </div>
         </section>
-        <div className="footer-content">
-          <p className="footer-text">© 2024 GitHub Wrapper. All rights reserved.</p>
-        </div>
+        
       </footer>
     </div>
   );

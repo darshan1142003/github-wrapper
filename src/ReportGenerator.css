@@ -93,5 +93,35 @@
 .logout-button:hover {
     background-color: #3cc47c; /* Slightly darker shade on hover */
 }
+
 /* Footer Styles */
 
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .instructions {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin-bottom: 20px; /* Reduce bottom margin for spacing */
+    }
+
+    .input-container {
+        max-width: 90%; /* Increase max-width to use more screen space */
+    }
+
+    .input {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .button, .logout-button {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+
+    .error {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+}

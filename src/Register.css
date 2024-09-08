@@ -4,7 +4,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #000000; /* Bold black background */
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 15px rgb(252, 251, 251); /* Enhanced shadow effect */
 }
 
@@ -12,6 +12,7 @@
     text-align: center;
     margin-bottom: 20px;
     color: #00e5ff;
+    font-size: 1.1rem;
 }
 
 .form-group {
@@ -21,6 +22,7 @@
 .label {
     display: block;
     margin-bottom: 5px;
+    color: #00e5ff; /* Color for better visibility */
 }
 
 .input {
@@ -28,6 +30,9 @@
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #00e5ff;
+    background-color: #e6f2ff; /* Light background for better readability */
+    color: #181818; /* Dark text for contrast */
+    font-size: 0.9rem; /* Adjusted for better readability */
 }
 
 .submit-button-container {
@@ -72,4 +77,52 @@
     border-radius: 15px;
     cursor: pointer;
     width: 100%; /* Set width to 100% to match the container */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .register-container {
+        max-width: 90%; /* Adjust width to fit smaller screens */
+        padding: 15px; /* Reduced padding for better fit */
+    }
+
+    .register-title {
+        font-size: 1rem; /* Smaller font size for better fit */
+        margin-bottom: 15px; /* Reduced margin for better spacing */
+    }
+
+    .form-group {
+        margin-bottom: 10px; /* Reduced margin for better spacing */
+    }
+
+    .label {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .input {
+        padding: 6px; /* Reduced padding */
+        font-size: 0.8rem; /* Adjusted font size */
+    }
+
+    .submit-button-container {
+        margin-top: 15px; /* Reduced margin for better fit */
+    }
+
+    .submit-button {
+        padding: 8px 15px; /* Adjusted padding for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .message {
+        font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .login-prompt {
+        font-size: 0.9rem; /* Adjusted font size */
+    }
+
+    .button {
+        padding: 8px 15px; /* Adjusted padding for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
 }

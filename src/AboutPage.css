@@ -14,18 +14,23 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 1rem 2rem;
     background: rgba(255, 255, 255, .1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(255, 255, 255, .2);
-    z-index: 1000; /* Ensure the navbar is on top of other content */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: background 0.3s, transform 0.3s;
 }
 
-/* Adjust the position of header if needed */
+.header:hover {
+    background: rgba(255, 255, 255, .2);
+    transform: translateY(-2px);
+}
+
 .header::before {
     content: '';
     position: absolute;
@@ -41,32 +46,10 @@
     left: 100%;
 }
 
-.logo {
-    color: #fff;
-    font-size: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-}
-
-.logoLink {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.logoImage {
-    height: 50px; /* Adjust the height to fit your design */
-    width: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
 /* About Page Styles */
 .about-container {
-    font-family: 'Arial', sans-serif;
-    color: #ffffff; /* White text for high contrast */
-    background-color: #000000; /* Bold black background */
+    color: #ffffff;
+    background-color: #000000;
     margin: 0;
     padding: 0;
     display: flex;
@@ -76,68 +59,42 @@
 
 /* Spacer Styles */
 .spacer {
-    height: calc(60px + 20px); /* Height to accommodate fixed navbar */
+    height: 10vh;
 }
 
 /* Hero Section Styles */
 .hero-section {
-    padding: 120px 20px; /* Increase padding to ensure content is below the fixed header */
+    padding: 8vh 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: #000000; /* Bold black background */
-    color: #ffffff; /* White text for contrast */
-    flex: 1; /* Ensure it takes up full viewport height */
-    margin-top: calc(60px + 20px); /* Adjust margin-top to accommodate the fixed navbar height */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    background-color: #000000;
+    color: #ffffff;
+    flex: 1;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Hero Title Styles */
 .hero-title {
-    font-size: 3rem; /* Large font size for prominence */
+    font-size: 3.5rem;
     margin: 0;
-    font-weight: 700; /* Bold text for impact */
+    font-weight: 700;
     line-height: 1.2;
-    color: #3cc47c; /* New vibrant green highlight */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhanced text shadow */
+    color: #3cc47c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: fadeIn 2s ease-out;
 }
 
 /* Hero Subtitle Styles */
 .hero-subtitle {
-    font-size: 1.4rem; /* Slightly larger subtitle */
-    margin-top: 20px; /* Space between title and subtitle */
+    font-size: 1.8rem;
+    margin-top: 1rem;
     font-weight: 300;
     line-height: 1.4;
-    color: #00e5ff; /* Vibrant cyan highlight */
+    color: #00e5ff;
     animation: slideUp 2s ease-out;
-}
-
-/* Animation for Hero Title */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animation for Hero Subtitle */
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Main Content Styles */
@@ -147,23 +104,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    margin-top: 20px; /* Add margin to ensure space below header */
+    padding: 2rem;
+    margin-top: 1rem;
 }
 
 /* Info Section Styles */
 .info-section {
     text-align: center;
-    max-width: 800px;
-    margin: 20px 0; /* Reduced margin to close the gap */
-    padding-top: 20px; /* Add padding-top to create space below header */
+    max-width: 80vw;
+    margin: 1.5rem 0;
+    padding-top: 1.5rem;
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* Info Title Styles */
 .info-title {
     font-size: 2.5rem;
-    color: #3cc47c; /* New vibrant green highlight */
-    margin-bottom: 20px;
+    color: #3cc47c;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    animation: bounceIn 1s ease-out;
 }
 
 /* Description Styles */
@@ -172,13 +132,6 @@
     line-height: 1.6;
 }
 
-/* Highlight Styles */
-.highlight {
-    color: #00e5ff; /* Vibrant cyan highlight */
-    font-weight: bold;
-}
-
-/* Login Section Styles */
 /* Login Section Styles */
 .login-section {
     text-align: center;
@@ -188,35 +141,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 0.5px solid #00e5ff; /* White border */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners for a smoother look */
-    background-color: rgba(0, 0, 0, 0.5); /* Slight background for contrast */
+    border: 1px solid #00e5ff;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-out;
 }
 
 .login-text {
     color: #ffffff;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 .button {
-    background-color: #00e5ff; /* Vibrant cyan button */
+    background-color: #00e5ff;
     color: #ffffff;
     border: none;
-    border-radius: 15px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-    margin-top: 10px;
-    border: 2px solid #ffffff; /* White border for button */
-    width: 55%;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1rem;
+    border: 2px solid #ffffff;
+    width: 60%;
 }
 
 .button:hover {
-    background-color: #3cc47c; /* Slightly darker shade on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #3cc47c;
+    transform: scale(1.05);
 }
 
 /* Features Container Styles */
@@ -224,166 +178,384 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* Increased gap for better spacing */
-    padding: 30px;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 /* Feature Title Styles */
 .features-title {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #3cc47c; /* New vibrant green color */
+    color: #3cc47c;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    animation: bounceIn 1s ease-out;
 }
 
 /* Feature Box Styles */
 .feature-box {
-    background: #1a1a1a; /* Dark background for contrast */
-    padding: 30px;
-    border-radius: 10px; /* More rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
-    max-width: 300px;
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    max-width: 25rem;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* Feature Box Hover Effect */
 .feature-box:hover {
-    transform: translateY(-10px); /* Slight lift effect */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+    transform: translateY(-0.5rem);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
 /* Feature Icon Styles */
 .feature-icon {
-    color: #3cc47c; /* Vibrant green for icons */
-    font-size: 2.5rem; /* Larger icon size */
-    margin-bottom: 15px; /* Space between icon and heading */
+    color: #3cc47c;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: bounceIn 1s ease-out;
 }
 
 /* Feature Heading Styles */
 .feature-heading {
-    font-size: 1.75rem; /* Slightly larger font size */
-    color: #00e5ff; /* Vibrant cyan for headings */
-    margin-bottom: 15px; /* Space between heading and description */
-}
-
-/* Feature Description Styles */
-.feature-description {
-    font-size: 1rem;
-    color: #ffffff; /* White text for contrast */
+    font-size: 2rem;
+    color: #00e5ff;
+    margin-bottom: 1rem;
 }
 
 /* Contact Section Styles */
 .contact-section {
-    background-color: #3cc47c; /* New vibrant green background */
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 2rem;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 1.5rem;
+    background-color: #1a1a1a;
+    animation: fadeIn 2s ease-out;
 }
 
+/* Contact Title Styles */
 .contact-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #3cc47c;
 }
 
+/* Contact Description Styles */
 .contact-description {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
+/* Contact Details Styles */
 .contact-details {
+    color: #ffffff; /* General text color */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 1.5rem;
 }
 
+/* Contact Item Styles */
 .contact-item {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeIn 2s ease-out;
 }
 
+/* Contact Icon Styles */
 .contact-icon {
-    margin-right: 10px;
+    margin-right: 0.5rem;
+    transition: color 0.3s;
 }
 
-.contact-icon.linkedin {
-    color: #0A66C2; /* LinkedIn blue */
+.email {
+    color: #d44638; /* Red color for email icon */
+    background-color: #ffffff;
 }
 
-.contact-icon.email {
-    color: #E74C3C; /* Email red */
+.linkedin {
+    color: #0077b5; /* LinkedIn's official blue color */
+    background-color: #ffffff;
 }
 
+/* Contact Link Styles */
 .contact-link {
-    color: #ffffff;
-    text-decoration: underline; /* Apply underline to contact links */
+    color: #00e5ff; /* Color for contact links */
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
 }
 
 /* Footer Styles */
-
 .footer {
-    padding: 20px;
-    background-color: #000000;
+    padding: 1rem;
     text-align: center;
-  }
-  
+}
 
 /* Developed by Section Styles */
 .developed-by {
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #000000; /* Background color to match the theme */
+    animation: fadeIn 2s ease-out;
 }
 
+/* Developed Title Styles */
 .developed-title {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    color: #3cc47c; /* Adjust color as needed */
 }
 
+/* Developers Container Styles */
 .developers {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    animation: fadeIn 2s ease-out;
 }
 
+/* Developer Link Styles */
 .developer {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: #ffffff;
+    text-decoration: underline;
+    color: #ffffff; /* Text color for the developer names */
+    transition: color 0.3s;
 }
 
+/* Developer Logo Styles */
 .developer-logo {
-    height: 60px;
-    width: 60px;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
-    margin-right: 10px;
-    border: 2px solid #74f0ed; /* Add your desired border color and width here */
+    margin-right: 0.5rem;
+    border: 2px solid #00e5ff; /* Border color for logos */
 }
-
-
 
 .developer-link-logo {
-    color: #0077b5;
-    margin-right: 10px;
+    color: #0077b5; /* LinkedIn blue color */
+    font-size: 1rem; /* Adjust font size to make the logo smaller */
+    height: 1.5rem; /* Adjust height */
+    width: 1.5rem; /* Adjust width */
+    display: inline-flex; /* Align items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background-color: #ffffff; /* Optional background color */
+    margin-right: 0.5rem; /* Add space to the right of the logo */
 }
 
-.developer-name {
-    font-size: 1rem;
-    color: #ffffff;
-    font-weight: 500;
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.developer-link {
-    font-size: 0.9rem;
-    color: #00e5ff;
-    text-decoration: none;
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.developer-link:hover {
-    text-decoration: underline;
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+
+    /* Main Content */
+    .main-content {
+        padding: 0.5rem;
+    }
+
+    /* About Us Section */
+    .info-section {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .info-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+        color: #dddddd;
+    }
+
+    /* Our Features Section */
+    .features-section {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+       
+        border-radius: 8px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .features-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-list {
+        font-size: 0.85rem;
+        color: #dddddd;
+    }
+
+    .feature-heading {
+        font-size: 1.6rem;
+    }
+
+    .feature-item {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 0.5rem;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .contact-description {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        color: #dddddd;
+    }
+
+    .contact-details {
+        font-size: 0.75rem;
+        text-align: center;
+        color: #b3b3b3;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: center; /* Center items horizontally */
+        margin-bottom: rem; /* Space between contact items */
+    }
+
+    /* Developed By Section */
+    .developed-by {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .developed-title {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .developers {
+        display: flex;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .developer-logo {
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+    }
+
+    /* Login Prompt Section */
+    .login-prompt {
+        padding: 1rem;
+        background-color: #1a1a1a;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+
+    .login-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .button {
+        background-color: #00e5ff;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 60%; /* Set width to 100% to match the container */
+        margin: 0.5rem 0; /* Space between buttons */
+    }
+
+    .button:hover {
+        background-color: #3cc47c; /* Slightly darker shade on hover */
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    /* General Adjustments */
+    .text-center {
+        text-align: center;
+    }
+
+    .small-padding {
+        padding: 0.3rem;
+    }
+
+    .margin-bottom {
+        margin-bottom: 1rem;
+    }
 }
